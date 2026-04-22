@@ -1,25 +1,24 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/initia.svg" width="80" alt="Initia Logo" />
-  <h1 align="center">REX — The King's Game. On-Chain.</h1>
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/initia.svg" width="80" alt="Initia Logo" />
+</p>
+
+<h1 align="center">REX — The King's Game. On-Chain.</h1>
 
 <p align="center">
   <video src="https://github.com/dexarxbt/Rex/raw/main/assets/landing-ani.mp4" width="800" autoplay loop muted playsinline></video>
 </p>
 
-<div align="center">
-  
-  <p align="center">
-    <strong>A breathtakingly cinematic, fully decentralized 3D chess experience.</strong>
-    <br />
-    Built natively on the Initia appchain architecture.
-  </p>
-  <p align="center">
-    <img src="https://img.shields.io/badge/Blockchain-Initia-7c3aed?style=for-the-badge&logo=chainlink&logoColor=white" alt="Initia" />
-    <img src="https://img.shields.io/badge/Smart%20Contracts-Move-blue?style=for-the-badge&logo=move&logoColor=white" alt="Move VM" />
-    <img src="https://img.shields.io/badge/Frontend-React%20Three%20Fiber-black?style=for-the-badge&logo=react&logoColor=61DAFB" alt="R3F" />
-  </p>
-</div>
+<p align="center">
+  <strong>A breathtakingly cinematic, fully decentralized 3D chess experience.</strong>
+  <br />
+  Built natively on the Initia appchain architecture.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Blockchain-Initia-7c3aed?style=for-the-badge&logo=chainlink&logoColor=white" alt="Initia" />
+  <img src="https://img.shields.io/badge/Smart%20Contracts-Move-blue?style=for-the-badge&logo=move&logoColor=white" alt="Move VM" />
+  <img src="https://img.shields.io/badge/Frontend-React%20Three%20Fiber-black?style=for-the-badge&logo=react&logoColor=61DAFB" alt="R3F" />
+</p>
 
 ---
 
@@ -88,6 +87,6 @@ rex-initia/
 
 ---
 
-<div align="center">
-  <p>Built with 💜 for the <strong>INITIATE Hackathon Season 1</strong></p>
-</div>
+<p align="center">
+  Built with 💜 for the <strong>INITIATE Hackathon Season 1</strong>
+</p>
