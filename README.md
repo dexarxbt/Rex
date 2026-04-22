@@ -1,8 +1,13 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/initia.svg" width="80" alt="Initia Logo" />
   <h1 align="center">REX — The King's Game. On-Chain.</h1>
-  
-  <video src="./assets/landing-ani.mp4" width="800" autoplay loop muted playsinline></video>
+</div>
+
+<p align="center">
+  <video src="https://github.com/dexarxbt/Rex/raw/main/assets/landing-ani.mp4" width="800" autoplay loop muted playsinline></video>
+</p>
+
+<div align="center">
   
   <p align="center">
     <strong>A breathtakingly cinematic, fully decentralized 3D chess experience.</strong>

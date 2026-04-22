@@ -271,13 +271,20 @@ function GameView() {
             zIndex: 100
           }}>
             <div className="card-gold" style={{ padding: '40px 60px', textAlign: 'center' }}>
-              <div style={{ fontSize: 48 }}>{isCheckmate ? '👑' : '🤝'}</div>
+              <div style={{ fontSize: 48 }}>{isCheckmate ? '👑' : chess.isDraw() ? '🤝' : '⚐'}</div>
               <h2 style={{ fontFamily: 'var(--font-fancy)', fontSize: 32, fontWeight: 800, margin: '16px 0 8px', color: 'var(--gold)' }}>
-                {isCheckmate ? 'Checkmate!' : chess.isDraw() ? 'Draw!' : 'Game Over'}
+                {isCheckmate ? 'Checkmate!' : chess.isDraw() ? 'Draw!' : 'Resigned'}
               </h2>
               <div style={{ color: 'var(--text-muted)' }}>
-                {isCheckmate ? 'The king has fallen.' : 'A peaceful resolution.'}
+                {isCheckmate ? 'The king has fallen.' : chess.isDraw() ? 'A peaceful resolution.' : 'The battle has ended.'}
               </div>
+              <button 
+                className="btn btn-primary" 
+                style={{ marginTop: 24 }}
+                onClick={() => setView('lobby')}
+              >
+                Back to Lobby
+              </button>
             </div>
           </div>
         )}
@@ -316,8 +323,6 @@ function GameView() {
         <div style={{ padding: '8px 16px' }}>
           {<GameControls
             onResign={resign}
-            onToggleAutoSign={toggleAutoSign}
-            isAutoSignEnabled={isAutoSignEnabled}
           />}
         </div>
 

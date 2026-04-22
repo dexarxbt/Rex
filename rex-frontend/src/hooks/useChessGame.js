@@ -207,24 +207,29 @@ export function useChessGame() {
   }, [gameId, fetchGameState])
 
   const resign = async () => {
-    await requestTxSync({
-      chainId: CHAIN_ID,
-      messages: [{
-        typeUrl: '/initia.move.v1.MsgExecute',
-        value: MsgExecute.fromPartial({
-          sender: initiaAddress,
-          moduleAddress: MODULE_ADDR,
-          moduleName: 'chess',
-          functionName: 'resign_game',
-          typeArgs: [],
-          args: [
-            encodeU64(gameId),
-          ],
-        }),
-      }],
-    })
-    await sleep(2000)
-    await fetchGameState(gameId)
+    try {
+      await requestTxSync({
+        chainId: CHAIN_ID,
+        messages: [{
+          typeUrl: '/initia.move.v1.MsgExecute',
+          value: MsgExecute.fromPartial({
+            sender: initiaAddress,
+            moduleAddress: MODULE_ADDR,
+            moduleName: 'chess',
+            functionName: 'resign_game',
+            typeArgs: [],
+            args: [
+              encodeU64(gameId),
+            ],
+          }),
+        }],
+      })
+      setGameStatus('finished')
+      await sleep(2000)
+      await fetchGameState(gameId)
+    } catch (err) {
+      console.error('Resignation failed:', err)
+    }
   }
 
   const createGame = async (opponentAddress, wager, timeControlMs) => {
