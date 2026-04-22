@@ -1,90 +1,65 @@
 <p align="center">
-  <img src="assets/initia-logo.gif" width="120" alt="REX Protocol" />
+  <img src="assets/initia-logo.gif" width="80" alt="REX" />
 </p>
 
-<h1 align="center">R E X</h1>
-<p align="center">
-  <strong>THE ASCENSION OF STRATEGY. IMMORTALIZED ON-CHAIN.</strong>
-</p>
+<h1 align="center">REX</h1>
 
 <p align="center">
-  <img src="assets/landing-ani.gif" width="1000" alt="REX Cinematic Preview" style="border-radius: 12px; box-shadow: 0 25px 60px rgba(0,0,0,0.6);" />
+  A high-fidelity chess protocol built on the Initia Appchain.
 </p>
 
 <p align="center">
-  <a href="https://initia.xyz"><img src="https://img.shields.io/badge/NETWORK-INITIA-7c3aed?style=for-the-badge&logo=chainlink&logoColor=white" alt="Initia Network" /></a>
-  <a href="https://move-language.github.io/move/"><img src="https://img.shields.io/badge/ENGINE-MOVE_VM-007bff?style=for-the-badge&logo=move&logoColor=white" alt="Move VM" /></a>
-  <a href="https://docs.pmnd.rs/react-three-fiber"><img src="https://img.shields.io/badge/VISUALS-R3F-000000?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Three Fiber" /></a>
-</p>
-
----
-
-## ♚ THE MANIFESTO
-
-REX is not a game; it is a **sovereign arena**. By merging the timeless complexity of chess with the ultra-high-performance architecture of the **Initia Appchain**, we have created a digital monument to pure strategy. 
-
-In the REX ecosystem, the board is an immutable ledger, the pieces are procedurally crafted artifacts, and every victory is etched forever into the history of the rollup. This is the "Void & Neon" era of on-chain gaming—where cinematic beauty meets cryptographic certainty.
-
----
-
-## 💎 THE UNIQUE FABRIC OF REX
-
-### 🎨 PROCEDURAL STAUNTON ARTISTRY
-Unlike traditional games that use static assets, REX generates its chess pieces **dynamically in the browser**. Using custom `LatheGeometries` and `ExtrudeGeometries`, every Staunton piece is a mathematically perfect 3D mesh, rendered with Physical Based Rendering (PBR) materials to capture every glint of neon and shadow of the void.
-
-### 🎥 KINETIC CAMERA ORCHESTRATION
-Experience the board from every angle. REX features a sophisticated **Camera Manager** that uses smooth *lerping* and *spherical interpolation* to pan and zoom based on the flow of the match. Whether you're delivering a checkmate or contemplating a gambit, the view is always cinematic.
-
-### 🛡️ MOVE VM: THE IRONCLAD ARBITER
-The entire rulebook of chess—including the nuances of *En Passant*, *Castling*, and *Pawn Promotion*—is fully implemented and verified within a custom **Move Smart Contract**. There are no "illegal moves" here; the blockchain itself is the grandmaster, ensuring that every transaction follows the sacred laws of the game.
-
-### ⚡ ENSHRINED AUTO-SIGNING
-We have eradicated the greatest friction of Web3. Utilizing Initia's native **Auto-Signing**, REX allows you to approve a session once and then execute moves with the speed of a desktop application. Your strategy flows uninterrupted, as the blockchain signs and submits moves in the background.
-
-### 🏆 TOURNAMENT PROTOCOLS & WAGERING
-Ascend the ranks in a fully decentralized tournament system. Create brackets, set wagers in native tokens, and let the smart contract handle the prize pool distribution with absolute transparency. Victory isn't just claimed; it is paid out by the code.
-
-### ⏪ TIME-TRAVEL: THE 3D TEMPORAL SCRUBBER
-Every game played on REX is a permanent record. Our unique **Replay Engine** allows you to pull any match from the ledger and scrub through time. Watch the 3D pieces perfectly reconstruct the battle on a fully interactive timeline, allowing for deep post-game analysis in a cinematic environment.
-
----
-
-## 🛠️ THE ARCHITECTURE OF VICTORY
-
-| Layer | Technology | Manifestation |
-| :--- | :--- | :--- |
-| **Foundation** | Initia Appchain | A sovereign, high-throughput rollup with 1s finality. |
-| **Intelligence** | Move Smart Contracts | Formal verification of game logic and state transitions. |
-| **Atmosphere** | React Three Fiber | Real-time PBR lighting, Bloom, and SSAO post-processing. |
-| **State** | Zustand | Atomic synchronization between the rollup and the 3D scene. |
-| **Abstraction** | InterwovenKit | Native Auto-Signing for a zero-friction gameplay loop. |
-
----
-
-## ⚡ MANIFEST THE ENVIRONMENT
-
-Awaken the REX protocol on your local machine:
-
-1.  **Initialize the sovereign rollup**
-    ```bash
-    weave init --vm move --chain-id rex-1
-    ```
-2.  **Etch the smart contracts onto the chain**
-    ```bash
-    cd rex-contract && minitiad move deploy
-    ```
-3.  **Ignite the cinematic interface**
-    ```bash
-    cd rex-frontend && npm install && npm run dev
-    ```
-
----
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/initia-labs/initia-registry/main/images/initia.svg" width="40" style="vertical-align: middle; margin-right: 15px;" />
-  Built with unyielding passion for the <strong>INITIATE HACKATHON SEASON 1</strong>
+  <img src="assets/landing-ani.gif" width="100%" alt="REX Preview" />
 </p>
 
 <p align="center">
-  <sub>REX — THE KING'S GAME. ON-CHAIN. FOREVER. © 2026</sub>
+  <img src="https://img.shields.io/badge/Network-Initia-7c3aed?style=flat-square" />
+  <img src="https://img.shields.io/badge/Language-Move-007bff?style=flat-square" />
+  <img src="https://img.shields.io/badge/Graphics-R3F-000000?style=flat-square" />
+</p>
+
+## Abstract
+
+REX represents the convergence of ancient strategy and modern distributed systems. It is a sovereign chess arena where every move is an immutable transaction on a dedicated rollup. By leveraging the Initia Move VM, REX ensures that game logic is formally verified, while a React Three Fiber frontend provides a cinematic interface previously reserved for desktop applications.
+
+## Technical Foundation
+
+### Move VM Integration
+The core engine of REX is a custom Move smart contract that implements the complete rulebook of chess. This includes complex state transitions such as castling, en passant, and pawn promotion. The MoveVM provides the safety guarantees necessary to ensure that game state remains corruption-proof.
+
+### Procedural Geometry
+Every piece on the REX board is procedurally generated in the browser. Instead of loading static assets, the frontend utilizes custom lathe and extrude geometries to create hyper-realistic Staunton pieces. This approach allows for dynamic mesh refinement and significantly reduced load times.
+
+### Kinetic Interaction
+The camera system uses spherical interpolation to track the progression of the match. It adapts to the active player's perspective and the intensity of the board state, providing a fluid, immersive experience that abstracts the underlying blockchain interactions.
+
+### Enshrined Auto-Signing
+Friction is the primary barrier to blockchain gaming. REX utilizes Initia's native auto-signing via InterwovenKit. This allows for session-based transaction approval, enabling players to submit moves instantly without the interruption of wallet confirmation prompts.
+
+## Core Features
+
+### Temporal Replay Engine
+Match history is archived as a series of ledger state changes. The replay engine allows users to scrub through the timeline of any match, reconstructing the 3D board state at any point in the game's history.
+
+### On-Chain Tournaments
+REX includes a sovereign tournament module. Brackets, entry fees, and prize distributions are handled automatically by the smart contract, providing a transparent and trustless competitive environment.
+
+### Wagered Protocol
+Players can stake native tokens on their performance. The smart contract acts as a secure escrow, automatically settling wagers based on the cryptographic outcome of the match.
+
+## Quick Start
+
+```bash
+# Initialize the Appchain
+weave init --vm move --chain-id rex-1
+
+# Deploy the Protocol
+cd rex-contract && minitiad move deploy
+
+# Launch the Interface
+cd rex-frontend && npm i && npm run dev
+```
+
+<p align="center">
+  Built for the Initia Hackathon Season 1.
 </p>
