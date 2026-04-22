@@ -5,7 +5,7 @@
 <h1 align="center">REX — The King's Game. On-Chain.</h1>
 
 <p align="center">
-  <video src="assets/landing-ani.mp4" width="800" autoplay loop muted playsinline></video>
+  <img src="assets/landing-ani.gif" width="800" alt="REX Animation" />
 </p>
 
 <p align="center">
