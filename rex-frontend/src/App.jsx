@@ -46,19 +46,26 @@ function Header() {
       zIndex: 50,
     }}>
       <div
-        style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}
+        style={{ display: 'flex', alignItems: 'center', gap: 12, cursor: 'pointer' }}
         onClick={() => setView('lobby')}
       >
-        <span style={{ fontSize: 20 }}>♔</span>
-        <span style={{ fontSize: 16, fontWeight: 900, letterSpacing: '-0.02em' }}>REX</span>
-        <span style={{
-          fontSize: 9, fontWeight: 600, color: 'var(--accent-light)',
-          background: 'rgba(124,58,237,0.15)',
-          padding: '2px 7px', borderRadius: 99,
-          letterSpacing: '0.1em', textTransform: 'uppercase',
-        }}>
-          Live on Initia
-        </span>
+        <div style={{
+          width: 32, height: 32, borderRadius: 8,
+          background: 'var(--grad-royal)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: 20, fontWeight: 900, color: 'white',
+          boxShadow: '0 4px 15px rgba(124,58,237,0.4)'
+        }}>♔</div>
+        <span style={{ fontSize: 18, fontWeight: 900, letterSpacing: '-0.03em', fontFamily: 'var(--font-display)' }}>REX</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 8px #10b981' }} />
+          <span style={{
+            fontSize: 10, fontWeight: 700, color: 'var(--text-muted)',
+            letterSpacing: '0.05em', textTransform: 'uppercase',
+          }}>
+            {import.meta.env.VITE_APPCHAIN_ID}
+          </span>
+        </div>
       </div>
 
       <nav style={{ display: 'flex', gap: 4, position: 'relative' }}>
@@ -253,6 +260,30 @@ function GameView() {
             Submitting move...
           </div>
         )}
+        {!isAutoSignEnabled && gameId !== 'bot' && (
+          <div 
+            onClick={toggleAutoSign}
+            style={{
+              position: 'absolute', bottom: 24, left: '50%', transform: 'translateX(-50%)',
+              zIndex: 10,
+              background: 'rgba(15,15,26,0.8)',
+              border: '1px solid var(--border)',
+              borderRadius: 12,
+              padding: '12px 20px',
+              fontSize: 13,
+              color: 'var(--text-muted)',
+              backdropFilter: 'blur(12px)',
+              cursor: 'pointer',
+              display: 'flex', alignItems: 'center', gap: 12,
+              boxShadow: '0 10px 40px rgba(0,0,0,0.5)',
+              transition: 'all 0.3s ease',
+            }}
+          >
+            <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#f59e0b' }} />
+            <span>Sign session for <strong>One-Click Moves</strong></span>
+            <button className="btn btn-primary btn-xs">Authorize</button>
+          </div>
+        )}
         {fen && <Scene
           fen={fen}
           onSquareClick={handleSquareClick}
@@ -323,6 +354,9 @@ function GameView() {
         <div style={{ padding: '8px 16px' }}>
           {<GameControls
             onResign={resign}
+            onOfferDraw={() => {}} 
+            onToggleAutoSign={toggleAutoSign}
+            isAutoSignEnabled={isAutoSignEnabled}
           />}
         </div>
 
