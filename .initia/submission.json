@@ -1,62 +1,12 @@
 {
   "project_name": "REX",
   "repo_url": "https://github.com/dexarxbt/Rex",
-  "commit_sha": "d31004dafa43d70e8c25902f3e47a1769c7c738f",
-
-  "chain": {
-    "l2_chain_id": "rex-1",
-    "l1_chain_id": "initiation-2",
-    "vm": "move",
-    "rollup_type": "optimistic",
-    "bridge": "OPinit + IBC"
-  },
-
-  "contract": {
-    "deployed_address": "init1yourmoduleaddresshere",
-    "modules": [
-      {
-        "name": "chess",
-        "path": "rex-contract/sources/chess.move",
-        "description": "Board state, full ruleset enforcement, move validation, game lifecycle, temporal replay index"
-      },
-      {
-        "name": "tournament",
-        "path": "rex-contract/sources/tournament.move",
-        "description": "Bracket construction, entry fee collection, round progression, automated prize settlement"
-      },
-      {
-        "name": "wager",
-        "path": "rex-contract/sources/wager.move",
-        "description": "Non-custodial escrow, match staking, cryptographic outcome resolution"
-      }
-    ],
-    "manifest": "rex-contract/Move.toml"
-  },
-
-  "native_feature": {
-    "name": "auto-signing",
-    "provider": "@initia/interwovenkit-react",
-    "description": "Players grant a single scoped session grant before a match. All subsequent moves are submitted as background transactions with zero wallet interruption for the duration of the session.",
-    "frontend_hook": "rex-frontend/src/hooks/useChessGame.js"
-  },
-
-  "frontend": {
-    "entry": "rex-frontend/src/App.jsx",
-    "renderer": "React Three Fiber",
-    "key_components": [
-      "rex-frontend/src/components/Board3D/Board.jsx",
-      "rex-frontend/src/components/Board3D/Pieces.jsx",
-      "rex-frontend/src/components/Board3D/CameraManager.jsx",
-      "rex-frontend/src/components/Lobby/GameReplay.jsx"
-    ]
-  },
-
-  "demo_video_url": "https://www.loom.com/share/your-loom-link-here",
-
-  "local_endpoints": {
-    "rollup_rpc": "http://localhost:26657",
-    "rollup_rest": "http://localhost:1317",
-    "rollup_indexer": "http://localhost:8080",
-    "frontend": "http://localhost:5176"
-  }
+  "commit_sha": "6ff71e6ce44942c3e96d270746586af698c8a2e2",
+  "rollup_chain_id": "rex-1",
+  "deployed_address": "init184qng3037mwf7exfsgm04e0jtzwya0j87l0mc2",
+  "vm": "move",
+  "native_feature": "auto-signing",
+  "core_logic_path": "rex-contract/sources/chess.move",
+  "native_feature_frontend_path": "rex-frontend/src/hooks/useChessGame.js",
+  "demo_video_url": "https://www.loom.com/share/your-loom-link-here"
 }
