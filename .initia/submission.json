@@ -8,5 +8,5 @@
   "native_feature": "auto-signing",
   "core_logic_path": "rex-contract/sources/chess.move",
   "native_feature_frontend_path": "rex-frontend/src/hooks/useChessGame.js",
-  "demo_video_url": "https://www.loom.com/share/your-loom-link-here"
+  "demo_video_url": "https://youtu.be/vtsuplT9tAA?si=cJB6Er3GTs1czK7d"
 }
